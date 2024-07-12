@@ -17,3 +17,33 @@ updates:
         applies-to: version-updates
         update-types:
         - "major"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "02:00"
+    groups:
+      all-actions:
+        applies-to: version-updates
+        patterns: [ "*" ]
+  - package-ecosystem: "docker"
+    directories:
+      - "/"
+      - "/services/ticker/docker"
+      - "/services/horizon/docker"
+      - "/services/friendbot/docker"
+      - "/services/horizon/internal/scripts/check_release_hash"
+      - "/services/keystore/docker"
+      - "/exp/services/ledgerexporter/docker"
+      - "/exp/services/webauth/docker"
+      - "/exp/services/recoverysigner/docker"
+      - "/services/regulated-assets-approval-server/docker"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "02:00"
+    groups:
+      all-docker:
+        applies-to: version-updates
+        patterns: [ "*" ]
