@@ -6,7 +6,7 @@ updates:
       interval: "weekly"
       day: "sunday"
       time: "02:00"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 2
     groups:
       minor-and-patch:
         applies-to: version-updates
@@ -23,6 +23,7 @@ updates:
       interval: "weekly"
       day: "sunday"
       time: "02:00"
+    open-pull-requests-limit: 2
     groups:
       all-actions:
         applies-to: version-updates
@@ -43,6 +44,7 @@ updates:
       interval: "weekly"
       day: "sunday"
       time: "02:00"
+    open-pull-requests-limit: 2
     groups:
       all-docker:
         applies-to: version-updates
