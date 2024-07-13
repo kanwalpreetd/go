@@ -28,7 +28,7 @@ require (
 	github.com/guregu/null v4.0.0+incompatible
 	github.com/holiman/uint256 v1.2.3
 	github.com/howeyc/gopass v0.0.0-20170109162249-bf9dde6d0d2c
-	github.com/jarcoal/httpmock v0.0.0-20161210151336-4442edb3db31
+	github.com/jarcoal/httpmock v1.3.1
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/lib/pq v1.10.9
 	github.com/manucorporat/sse v0.0.0-20160126180136-ee05b128a739
@@ -50,7 +50,7 @@ require (
 	github.com/stellar/go-xdr v0.0.0-20231122183749-b53fb00bcac2
 	github.com/stellar/throttled v2.2.3-0.20190823235211-89d75816f59d+incompatible
 	github.com/stretchr/testify v1.9.0
-	github.com/tyler-smith/go-bip39 v0.0.0-20180618194314-52158e4697b8
+	github.com/tyler-smith/go-bip39 v1.1.0
 	github.com/xdrpp/goxdr v0.1.1
 	google.golang.org/api v0.183.0
 	gopkg.in/gavv/httpexpect.v1 v1.0.0-20170111145843-40724cf1e4a0
