@@ -30,7 +30,6 @@ updates:
         patterns: [ "*" ]
   - package-ecosystem: "docker"
     directories:
-      - "/"
       - "/services/ticker/docker"
       - "/services/horizon/docker"
       - "/services/friendbot/docker"
