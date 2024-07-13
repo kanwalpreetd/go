@@ -19,7 +19,7 @@ jobs:
       STELLAR_CORE_VERSION: 21.1.0-1921.b3aeb14cc.focal
       VERSION: ${GITHUB_REF_NAME#ledgerexporter-v} 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: github.sha
       - name: Pull Quickstart image
@@ -47,7 +47,7 @@ jobs:
 
       # Push images
       - name: Login to DockerHub
-        uses: docker/login-action@bb984efc561711aaa26e433c32c3521176eae55b
+        uses: docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
