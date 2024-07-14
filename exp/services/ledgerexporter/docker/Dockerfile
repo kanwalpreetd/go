@@ -12,7 +12,7 @@ COPY . ./
 ARG GOFLAGS
 RUN go install github.com/stellar/go/exp/services/ledgerexporter
 
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 ARG STELLAR_CORE_VERSION
 ENV STELLAR_CORE_VERSION=${STELLAR_CORE_VERSION:-*}
 ENV STELLAR_CORE_BINARY_PATH /usr/bin/stellar-core
