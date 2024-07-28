@@ -42,7 +42,7 @@ jobs:
       PGPASSWORD: postgres
       PGDATABASE: postgres
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           # For pull requests, build and test the PR head not a merge of the PR with the destination.
           ref: ${{ github.event.pull_request.head.sha || github.ref }}
@@ -103,7 +103,7 @@ jobs:
 
       - name: Restore Horizon binary and integration tests source hash to cache
         id: horizon_binary_tests_hash
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@v4
         with:
           path: ./empty
           lookup-only: true
@@ -114,7 +114,7 @@ jobs:
 
       - name: Save Horizon binary and integration tests source hash to cache
         if: ${{ success() && steps.horizon_binary_tests_hash.outputs.cache-hit != 'true' }}
-        uses: actions/cache/save@v3
+        uses: actions/cache/save@v4
         with:
           path: ./empty
           key: ${{ env.COMBINED_SOURCE_HASH }}
@@ -126,7 +126,7 @@ jobs:
       STELLAR_CORE_VERSION: 21.0.0-1872.c6f474133.focal
       CAPTIVE_CORE_STORAGE_PATH: /tmp
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           # For pull requests, build and test the PR head not a merge of the PR with the destination.
           ref: ${{ github.event.pull_request.head.sha || github.ref }}
@@ -140,7 +140,7 @@ jobs:
       # Push image
       - if: github.ref == 'refs/heads/master'
         name: Login to DockerHub
-        uses: docker/login-action@bb984efc561711aaa26e433c32c3521176eae55b
+        uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
