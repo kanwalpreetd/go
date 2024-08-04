@@ -36,7 +36,7 @@ jobs:
         run: |
           docker pull "$LEDGEREXPORTER_INTEGRATION_TESTS_QUICKSTART_IMAGE"
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           # For pull requests, build and test the PR head not a merge of the PR with the destination.
           ref:  ${{ github.event.pull_request.head.sha || github.ref }}
